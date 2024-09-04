@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>List of BLogs</h1>
+    <div>
+        {% for x in list %}
+
+<a href={% url 'Detail' x.id %}><h3>{{x.title}}</h3></a><h3>{{x.title}}</h3>
+<p>{{x.des | truncatewords:20}}</p>
+        {% endfor %}
+    </div>
+</body>
+</html>
